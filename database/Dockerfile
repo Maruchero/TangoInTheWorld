@@ -1,0 +1,3 @@
+FROM mysql:8.2.0
+
+ENV MYSQL_ROOT_PASSWORD=rootp4ssw0rd
