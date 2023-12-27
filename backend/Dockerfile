@@ -1,14 +1,8 @@
 FROM php:8.3-apache
 
-RUN apt-get update
-RUN apt-get install -y git zip unzip
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer require league/oauth2-server
-
 RUN docker-php-ext-install mysqli
 
-COPY api/ /var/www/html/api/
-COPY db/ /var/www/html/db/
+COPY . /var/www/html
 
 # Env variables for standalone usage
 ENV MYSQL_USER=root
