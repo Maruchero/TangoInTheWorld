@@ -1,0 +1,1 @@
+export type Privilege = 'admin' | 'publisher' | 'authenticated' | 'guest';
